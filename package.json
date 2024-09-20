@@ -1,0 +1,31 @@
+{
+  "name": "@codecompose/typescript-config",
+  "description": "Reusable strict TypeScript configurations",
+  "version": "1.0.0-0",
+  "license": "MIT",
+  "author": "Thijs Koerselman",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "typescript",
+    "config",
+    "configuration",
+    "strict",
+    "reusable",
+    "base",
+    "nextjs",
+    "library",
+    "service"
+  ],
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "library.json",
+    "service.json"
+  ],
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  },
+  "packageManager": "pnpm@9.8.0+sha256.56a9e76b51796ca7f73b85e44cf83712862091f4d498c0ce4d5b7ecdc6ba18f7"
+}

@@ -1,2 +1,3 @@
 # typescript-config
-A reusable strict Typescript configuration
+
+Reusable strict Typescript configurations.

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "A Next.js App",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "lib": ["dom", "dom.iterable", "es2022"],
+    "noEmit": true
+  },
+  "include": ["${configDir}/src", "${configDir}/next-env.d.ts"]
+}

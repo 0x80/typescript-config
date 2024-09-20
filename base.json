@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Base Configuration",
+  "compilerOptions": {
+    /* Base Options: */
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "lib": ["es2022"],
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    /* My Standard */
+    "module": "preserve",
+    "outDir": "${configDir}/dist",
+    "rootDir": "${configDir}/src",
+    "baseUrl": "${configDir}",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["${configDir}/src", "${configDir}/src/**/*.json"]
+}
