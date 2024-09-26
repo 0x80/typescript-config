@@ -4,7 +4,7 @@
   "extends": "./base.json",
   "compilerOptions": {
     "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "es2022"],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "noEmit": true
   },
   "include": ["${configDir}/src", "${configDir}/next-env.d.ts"]
