@@ -1,7 +1,7 @@
 {
   "name": "@codecompose/typescript-config",
   "description": "Reusable strict TypeScript configurations",
-  "version": "1.0.0-1",
+  "version": "1.0.0-2",
   "license": "MIT",
   "author": "Thijs Koerselman",
   "publishConfig": {
