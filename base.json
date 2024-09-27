@@ -18,14 +18,16 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
-    /* My Standard */
+    /* Opinion */
+    "incremental": true,
     "module": "preserve",
-    "outDir": "${configDir}/dist",
-    "rootDir": "${configDir}/src",
+    "outDir": "dist",
     "baseUrl": "${configDir}",
+    "rootDir": "${configDir}/src",
     "paths": {
       "~/*": ["./src/*"]
     }
   },
-  "include": ["${configDir}/src", "${configDir}/src/**/*.json"]
+  "include": ["src", "src/**/*.json"],
+  "exclude": ["node_modules", "dist"]
 }
