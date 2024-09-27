@@ -21,7 +21,7 @@
     /* Opinion */
     "incremental": true,
     "module": "preserve",
-    "outDir": "dist",
+    "outDir": "${configDir}/dist",
     "baseUrl": "${configDir}",
     "rootDir": "${configDir}/src",
     "paths": {
