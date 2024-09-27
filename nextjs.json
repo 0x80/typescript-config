@@ -3,11 +3,16 @@
   "display": "A Next.js App",
   "extends": "./base.json",
   "compilerOptions": {
-    "jsx": "preserve",
+    "jsx": "preserve", // next does its own jsx transformation
     "lib": ["dom", "dom.iterable", "esnext"],
     "noEmit": true,
-    "incremental": true // because nextjs adds this automatically otherwise
+    "rootDir": "${configDir}", // nextjs targets files outside of src in root as well
+    "plugins": [
+      {
+        "name": "next" // plugin comes installed with nextjs
+      }
+    ]
   },
-  "include": ["${configDir}/src", "${configDir}/next-env.d.ts"],
-  "exclude": ["node_modules"] // because nextjs adds this automatically otherwise
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
