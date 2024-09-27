@@ -28,6 +28,6 @@
       "~/*": ["./src/*"]
     }
   },
-  "include": ["src", "src/**/*.json"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["${configDir}/src", "${configDir}/src/**/*.json"],
+  "exclude": ["${configDir}/node_modules", "${configDir}/dist"]
 }
