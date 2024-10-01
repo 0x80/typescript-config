@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "A Single Shared Library",
+  "extends": "./base.json",
+  "compilerOptions": {
+    /* AND if you're building for a library: */
+    "declaration": true
+  }
+}
