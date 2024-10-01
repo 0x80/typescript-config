@@ -20,6 +20,7 @@
 
     /* Opinion */
     "incremental": true,
+    "tsBuildInfoFile": "${configDir}/.tsbuildinfo",
     "module": "preserve",
     "outDir": "${configDir}/dist",
     "baseUrl": "${configDir}",
