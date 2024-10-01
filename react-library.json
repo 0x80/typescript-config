@@ -5,8 +5,6 @@
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "es2023"],
     "jsx": "react-jsx",
-    /* If transpiling with TypeScript: */
-    "sourceMap": true,
 
     /* AND if you're building for a library: */
     "declaration": true,
