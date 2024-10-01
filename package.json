@@ -20,10 +20,12 @@
   ],
   "files": [
     "base.json",
-    "nextjs.json",
     "library.json",
+    "nextjs.json",
     "react-library.json",
-    "service.json"
+    "service.json",
+    "single-library.json",
+    "single-react-library.json"
   ],
   "devDependencies": {
     "eslint": "^8.57.0",
