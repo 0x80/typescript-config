@@ -4,6 +4,7 @@
   "extends": "./base.json",
   "compilerOptions": {
     /* AND if you're building for a library: */
-    "declaration": true
+    "declaration": true,
+    "declarationMap": true
   }
 }
