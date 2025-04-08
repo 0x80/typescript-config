@@ -19,14 +19,18 @@
     "service"
   ],
   "files": [
-    "base.json",
-    "library.json",
-    "nextjs.json",
-    "react-library.json",
-    "service.json",
-    "single-library.json",
-    "single-react-library.json"
+    "src/*.json",
+    "src/monorepo/*.json"
   ],
+  "exports": {
+    "./base": "./src/base.json",
+    "./library": "./src/library.json",
+    "./nextjs": "./src/nextjs.json",
+    "./react-library": "./src/react-library.json",
+    "./monorepo/library": "./src/monorepo/library.json",
+    "./monorepo/react-library": "./src/monorepo/react-library.json",
+    "./monorepo/service": "./src/monorepo/service.json"
+  },
   "devDependencies": {
     "eslint": "^8.57.0",
     "prettier": "^3.3.3",

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Standalone shared library",
+  "extends": "./base.json",
+  "compilerOptions": {
+    /* AND if you're building for a library: */
+    "declaration": true,
+    "declarationMap": true
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Backend service",
+  "extends": "./base.json",
+  "compilerOptions": {}
+}

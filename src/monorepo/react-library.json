@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Monorepo React component library",
+  "extends": "../react-library.json",
+  "compilerOptions": {
+    /* AND if you're building for a library in a monorepo: */
+    "composite": true,
+    "declarationMap": true
+  }
+}

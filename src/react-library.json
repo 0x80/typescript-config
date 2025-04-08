@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Standalone React component library",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
+
+    /* AND if you're building for a library: */
+    "declaration": true,
+    "declarationMap": true
+  }
+}
