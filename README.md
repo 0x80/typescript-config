@@ -18,42 +18,17 @@ Configurations are organized based on their intended use:
 - **Monorepo configurations**: Under the `/monorepo` path for monorepo-specific
   setups
 
-## Warning
-
-At the time of writing, not all tooling correctly interprets the use of
-`${configDir}` introduced in TS v5.5 that this package depends on.
-
-- Next.js will require you to explicitly defined "includes". Give it "src" and
-  it will inject its types on startup.
-- TSUP will not understand the tsconfig if you ask it to generate type
-  definitions. I use tsc to generate the types, as demonstrated in
-  [mono-ts](https://github.com/0x80/mono-ts).
-
 ## Install
 
-`pnpm i @codecompose/typescript-config -D`
-
-...or the equivalent for your package manager.
+`npm i @codecompose/typescript-config -D`
 
 ## Usage
 
-For non-monorepo projects:
-
 ```json
 {
-  "extends": "@codecompose/typescript-config/library"
+  "extends": "@codecompose/typescript-config/base"
 }
 ```
-
-For monorepo projects:
-
-```json
-{
-  "extends": "@codecompose/typescript-config/monorepo/library"
-}
-```
-
-Note: The `.json` extension is no longer needed in imports.
 
 ## Available Configurations
 
@@ -63,6 +38,7 @@ Note: The `.json` extension is no longer needed in imports.
 
 ### Stand-alone Configurations
 
+- `base` - For anything non-specific
 - `library` - For general libraries
 - `react-library` - For React component libraries
 - `nextjs` - For Next.js applications
@@ -71,16 +47,16 @@ Note: The `.json` extension is no longer needed in imports.
 ### Monorepo Configurations
 
 When using a monorepo, the packages that other packages depend on should use the
-enhanced variant.
+"shared" variant.
 
-- `monorepo/library` - For shared libraries in a monorepo
-- `monorepo/react-library` - For shared React component libraries in a monorepo
+- `shared-library` - For shared libraries in a monorepo
+- `shared-react-library` - For shared React component libraries in a monorepo
 
 The `nextjs` and `service` configs are compatible with both monorepo and
 non-monorepo.
 
-For other project types, like a CLI or E2E app, you can probably just use the
-`base` configuration.
+For other project types, like a CLI or E2E app, you can use the `base`
+configuration.
 
 ## Assumptions and Recommendations
 
@@ -93,3 +69,14 @@ happen that builds get stuck in limbo and you need to delete the
 recommend adding the following script to your manifest based on `del-cli`:
 
 `"clean": "del-cli dist tsconfig.tsbuildinfo"`
+
+## Known Issues
+
+At the time of writing, not all tooling correctly interprets the use of
+`${configDir}` introduced in TS v5.5 that this package depends on.
+
+- Next.js will require you to explicitly defined "includes". Give it "src" and
+  it will inject its types on startup.
+- TSUP will not understand the tsconfig if you ask it to generate type
+  definitions. I use tsc to generate the types, as demonstrated in
+  [mono-ts](https://github.com/0x80/mono-ts).

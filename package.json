@@ -28,8 +28,8 @@
     "./nextjs": "./src/nextjs.json",
     "./react-library": "./src/react-library.json",
     "./service": "./src/service.json",
-    "./monorepo/library": "./src/monorepo/library.json",
-    "./monorepo/react-library": "./src/monorepo/react-library.json"
+    "./shared-library": "./src/shared-library.json",
+    "./shared-react-library": "./src/shared-react-library.json"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
