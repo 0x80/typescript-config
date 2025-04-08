@@ -11,25 +11,25 @@
     "typescript",
     "config",
     "configuration",
+    "monorepo",
     "strict",
     "reusable",
-    "base",
     "nextjs",
+    "react",
     "library",
     "service"
   ],
   "files": [
-    "src/*.json",
-    "src/monorepo/*.json"
+    "src"
   ],
   "exports": {
     "./base": "./src/base.json",
     "./library": "./src/library.json",
     "./nextjs": "./src/nextjs.json",
     "./react-library": "./src/react-library.json",
+    "./service": "./src/service.json",
     "./monorepo/library": "./src/monorepo/library.json",
-    "./monorepo/react-library": "./src/monorepo/react-library.json",
-    "./monorepo/service": "./src/monorepo/service.json"
+    "./monorepo/react-library": "./src/monorepo/react-library.json"
   },
   "devDependencies": {
     "eslint": "^8.57.0",
