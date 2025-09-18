@@ -5,9 +5,7 @@
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "react-jsx",
-
-    /* AND if you're building for a library: */
-    "declaration": true,
-    "declarationMap": true
+    /* Assuming your bundler will output everything.  */
+    "noEmit": true
   }
 }

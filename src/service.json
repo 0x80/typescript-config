@@ -1,6 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Backend service",
+  "display": "Backend service / app",
   "extends": "./base.json",
-  "compilerOptions": {}
+  "compilerOptions": {
+     /* Assuming your bundler will output everything.  */
+    "noEmit": true,
+  }
 }
