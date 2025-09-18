@@ -1,8 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Monorepo shared React component library",
-  "extends": "./react-library.json",
+  "extends": "./base.json",
   "compilerOptions": {
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "jsx": "react-jsx",
     /* Required for project references, which provide go-to-definition in your
     IDE without first having to build the module, which is essential during development. */
     "composite": true
