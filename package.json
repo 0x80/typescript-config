@@ -10,14 +10,14 @@
   "keywords": [
     "typescript",
     "config",
-    "configuration",
     "monorepo",
     "strict",
     "reusable",
     "nextjs",
     "react",
     "library",
-    "service"
+    "service",
+    "bundler"
   ],
   "files": [
     "src"
