@@ -3,7 +3,8 @@
   "display": "Monorepo shared library",
   "extends": "./library.json",
   "compilerOptions": {
-    /* AND if you're building for a library in a monorepo: */
+    /* Required for project references, which provide go-to-definition in your IDE without first having to build the module, which is essential during development. */
     "composite": true
+    /* Assuming your bundler will output type declarations and declaration-maps */
   }
 }

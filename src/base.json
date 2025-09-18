@@ -18,6 +18,9 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
+    /* Assuming bundler will output EVERYTHING. You'll need a modern bundler
+    like tsdown to output declarationMaps for shared monorepo libraries. */
+    "noEmit": true,
     /* Opinion */
     "incremental": true,
     "tsBuildInfoFile": "${configDir}/tsconfig.tsbuildinfo",
@@ -26,9 +29,14 @@
     "baseUrl": "${configDir}",
     "rootDir": "${configDir}/src",
     "paths": {
-      "~/*": ["./src/*"]
+      "~/*": ["./src/*"],
+      "@/*": ["./src/*"]
     }
   },
   "include": ["${configDir}/src", "${configDir}/src/**/*.json"],
-  "exclude": ["${configDir}/node_modules", "${configDir}/dist"]
+  "exclude": [
+    "${configDir}/node_modules",
+    "${configDir}/dist",
+    "${configDir}/isolate"
+  ]
 }

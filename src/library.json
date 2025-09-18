@@ -3,8 +3,6 @@
   "display": "Standalone shared library",
   "extends": "./base.json",
   "compilerOptions": {
-    /* AND if you're building for a library: */
-    "declaration": true,
-    "declarationMap": true
+    /* Assuming your bundler will output declaration and declarationMap */
   }
 }
