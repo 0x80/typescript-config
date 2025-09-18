@@ -5,6 +5,7 @@
   "compilerOptions": {
     "jsx": "preserve", // next does its own jsx transformation
     "lib": ["dom", "dom.iterable", "esnext"],
+    "noEmit": true, // nextjs bundler will output everything
     "rootDir": "${configDir}", // nextjs targets files outside of src in root as well
     "plugins": [
       {

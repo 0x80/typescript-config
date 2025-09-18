@@ -4,6 +4,8 @@
   "extends": "./base.json",
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    /* Assuming your bundler will output everything.  */
+    "noEmit": true
   }
 }

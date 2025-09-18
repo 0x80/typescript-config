@@ -17,10 +17,8 @@
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
+    "erasableSyntaxOnly": true,
 
-    /* Assuming bundler will output EVERYTHING. You'll need a modern bundler
-    like tsdown to output declarationMaps for shared monorepo libraries. */
-    "noEmit": true,
     /* Opinion */
     "incremental": true,
     "tsBuildInfoFile": "${configDir}/tsconfig.tsbuildinfo",

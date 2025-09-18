@@ -3,8 +3,10 @@
   "display": "Monorepo shared library",
   "extends": "./library.json",
   "compilerOptions": {
-    /* Required for project references, which provide go-to-definition in your IDE without first having to build the module, which is essential during development. */
+    /* Required for project references, which provide go-to-definition in your
+    IDE without first having to build the module, which is essential during development. */
     "composite": true
-    /* Assuming your bundler will output type declarations and declaration-maps */
+    /* Assuming your bundler will output everything, but we can not have noEmit
+    enabled because it is not compatible with composite  / project references */
   }
 }
