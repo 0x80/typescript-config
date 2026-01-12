@@ -24,11 +24,11 @@
     "tsBuildInfoFile": "${configDir}/tsconfig.tsbuildinfo",
     "module": "preserve",
     "outDir": "${configDir}/dist",
-    "baseUrl": "${configDir}",
+    // "baseUrl": "${configDir}",
     "rootDir": "${configDir}/src",
     "paths": {
-      "~/*": ["./src/*"],
-      "@/*": ["./src/*"]
+      "~/*": ["${configDir}/src/*"],
+      "@/*": ["${configDir}/src/*"]
     }
   },
   "include": ["${configDir}/src", "${configDir}/src/**/*.json"],
