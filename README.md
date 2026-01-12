@@ -11,7 +11,9 @@ Opinionated and reusable Typescript configurations, geared towards modern build 
 
 (*) Project references / shared monorepo packages also emit code.
 
-To use this successfully, you would need a modern bundler like [tsdown](https://tsdown.dev/). You can check out the [mono-ts](https://github.com/0x80/mono-ts) boilerplate for a working example of a modern monorepo setup with tsdown.
+To use this successfully, you would need a modern bundler like [tsdown](https://tsdown.dev/). You can check out the [typescript-monorepo](https://github.com/0x80/typescript-monorepo) boilerplate for a working example of a modern monorepo setup with tsdown.
+
+These configurations are also compatible with [TSGo](https://github.com/nicksrandall/tsgo), the native Go port of the TypeScript compiler.
 
 
 ## Install
