@@ -4,6 +4,10 @@
   "version": "2.3.0",
   "license": "MIT",
   "author": "Thijs Koerselman",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0x80/typescript-config"
+  },
   "publishConfig": {
     "access": "public"
   },
