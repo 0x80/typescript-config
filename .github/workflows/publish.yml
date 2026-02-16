@@ -52,10 +52,13 @@ jobs:
 
       - name: Bump version
         id: version
+        env:
+          BUMP: ${{ inputs.bump }}
+          PREID: ${{ inputs.preid }}
         run: |
-          ARGS=("${{ inputs.bump }}")
-          if [[ "${{ inputs.bump }}" == pre* && -n "${{ inputs.preid }}" ]]; then
-            ARGS+=(--preid "${{ inputs.preid }}")
+          ARGS=("$BUMP")
+          if [[ "$BUMP" == pre* && -n "$PREID" ]]; then
+            ARGS+=(--preid "$PREID")
           fi
 
           npm version "${ARGS[@]}" --git-tag-version true
