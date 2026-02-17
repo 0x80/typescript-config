@@ -3,18 +3,15 @@
   "display": "Base configuration",
   "compilerOptions": {
     /* Base Options: */
-    "esModuleInterop": true,
     "skipLibCheck": true,
     "target": "esnext",
     "lib": ["esnext"],
     "allowJs": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
-    "isolatedModules": true,
     "verbatimModuleSyntax": true,
 
     /* Strictness */
-    "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "erasableSyntaxOnly": true,
@@ -24,7 +21,6 @@
     "tsBuildInfoFile": "${configDir}/tsconfig.tsbuildinfo",
     "module": "preserve",
     "outDir": "${configDir}/dist",
-    // "baseUrl": "${configDir}",
     "rootDir": "${configDir}/src",
     "paths": {
       "~/*": ["${configDir}/src/*"],

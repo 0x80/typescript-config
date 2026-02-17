@@ -4,10 +4,11 @@ Opinionated and reusable Typescript configurations, geared towards modern build 
 
 - Only use the Typescript compiler for type-checking (*) 
 - Use your bundler to output code, sourcemaps, and type declarations where needed.
-- Use strict settings, including `noUncheckedIndexedAccess` and `erasableSyntaxOnly`.
+- Requires TypeScript 6.0 or later
+- Builds on TS6 strict defaults with additional strictness: `noUncheckedIndexedAccess`, `noImplicitOverride`, and `erasableSyntaxOnly`
 - Assume `src` and `dist` directories
 - Use of `~/` or `@/` as path alias for `src`
-- Leverages TS 5.5 feature `${configDir}` to remove all client configuration.
+- Uses `${configDir}` to remove all client configuration
 
 (*) Project references / shared monorepo packages also emit code.
 
@@ -73,9 +74,37 @@ If you publish your package, it is recommended to include the Typescript source 
 
 To export source files next to your dist output, you define the `files` field in your package.json as `["src", "dist"]`.
 
-## Caveats
+## V3 — TypeScript 6
 
-Older tooling might not correctly interpret the use of `${configDir}`, which this package uses extensively, and was only introduced in TS v5.5.
+V3 is a major release that requires TypeScript 6.0 or later.
+
+TypeScript 6 aligns its defaults with the strict-by-default philosophy that this package has always followed. As a result, the base config is now leaner — options that are now TS6 defaults (`strict`, `esModuleInterop`, `isolatedModules`) have been removed.
+
+TS6 also defaults `types` to `[]`, meaning `@types/*` packages are no longer auto-included. If your project depends on ambient type packages, you need to explicitly add them to your tsconfig:
+
+```json
+{
+  "extends": "@codecompose/typescript-config/base",
+  "compilerOptions": {
+    "types": ["node"]
+  }
+}
+```
+
+This aligns with the strict-by-default philosophy — type dependencies should be explicit.
+
+For users upgrading from v2, see the migration guide below.
+
+## Migrating from v2
+
+- **TypeScript 6 is required** — there is no backward compatibility with TS5
+- **Removed `strict: true`** — now a TS6 default
+- **Removed `esModuleInterop: true`** — safe interop behavior is always on in TS6
+- **Removed `isolatedModules: true`** — implied by `verbatimModuleSyntax`
+- **Removed commented-out `baseUrl`** — deprecated in TS6
+- **Action required:** if you relied on auto-included `@types/*` packages, add `"types": ["node"]` (or whatever types you need) to your tsconfig
+
+## Caveats
 
 Next.js v15 requires you to explicitly configure "includes". If you give it just "src" it will inject its own types on startup. I assume this will improve in the future.
 
