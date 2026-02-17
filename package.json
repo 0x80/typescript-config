@@ -1,7 +1,7 @@
 {
   "name": "@codecompose/typescript-config",
   "description": "Opinionated reusable TypeScript configurations",
-  "version": "2.3.0",
+  "version": "3.0.0",
   "license": "MIT",
   "author": "Thijs Koerselman",
   "repository": {
@@ -34,6 +34,9 @@
     "./service": "./src/service.json",
     "./shared-library": "./src/shared-library.json",
     "./shared-react-library": "./src/shared-react-library.json"
+  },
+  "peerDependencies": {
+    "typescript": ">=6.0.0"
   },
   "devDependencies": {},
   "packageManager": "pnpm@9.8.0"
