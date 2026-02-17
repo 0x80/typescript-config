@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       bump:
-        description: "Version bump type"
+        description: "Version bump type (ignored when specific version is set)"
         required: true
         type: choice
         options:
@@ -15,6 +15,10 @@ on:
           - preminor
           - premajor
           - prerelease
+      version:
+        description: "Specific version to publish (e.g. 3.0.0-0). Overrides bump when set."
+        required: false
+        type: string
       preid:
         description: "Prerelease identifier (alpha, beta, rc). Only used with pre* bumps."
         required: false
@@ -56,13 +60,17 @@ jobs:
         env:
           BUMP: ${{ inputs.bump }}
           PREID: ${{ inputs.preid }}
+          SPECIFIC_VERSION: ${{ inputs.version }}
         run: |
-          ARGS=("$BUMP")
-          if [[ "$BUMP" == pre* && -n "$PREID" ]]; then
-            ARGS+=(--preid "$PREID")
+          if [[ -n "$SPECIFIC_VERSION" ]]; then
+            npm version "$SPECIFIC_VERSION" --git-tag-version true
+          else
+            ARGS=("$BUMP")
+            if [[ "$BUMP" == pre* && -n "$PREID" ]]; then
+              ARGS+=(--preid "$PREID")
+            fi
+            npm version "${ARGS[@]}" --git-tag-version true
           fi
-
-          npm version "${ARGS[@]}" --git-tag-version true
 
           VERSION=$(node -p "require('./package.json').version")
           TAG="v${VERSION}"
