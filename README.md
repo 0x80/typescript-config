@@ -78,7 +78,7 @@ To export source files next to your dist output, you define the `files` field in
 
 V3 is a major release that requires TypeScript 6.0 or later.
 
-TypeScript 6 aligns its defaults with the strict-by-default philosophy that this package has always followed. As a result, the base config is now leaner — options that are now TS6 defaults (`strict`, `esModuleInterop`, `isolatedModules`) have been removed.
+TypeScript 6 aligns its defaults with the strict-by-default philosophy that this package has always followed. As a result, the base config is now leaner — options that are now TS6 defaults (`strict`, `esModuleInterop`) have been removed, and `isolatedModules` was dropped since it is implied by `verbatimModuleSyntax`.
 
 TS6 also defaults `types` to `[]`, meaning `@types/*` packages are no longer auto-included. If your project depends on ambient type packages, you need to explicitly add them to your tsconfig:
 
