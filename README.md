@@ -1,5 +1,7 @@
 # typescript-config
 
+Documentation: [typescript-config.codecompose.dev](https://typescript-config.codecompose.dev)
+
 Opinionated and reusable TypeScript configurations, geared towards modern build tooling in both monorepos and single repositories.
 
 - Uses the TypeScript compiler for type-checking only (*)

@@ -12,3 +12,7 @@ dist
 
 # typescript composite
 *.tsbuildinfo
+
+# vitepress
+docs/.vitepress/dist
+docs/.vitepress/cache
