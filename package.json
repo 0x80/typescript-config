@@ -4,6 +4,7 @@
   "version": "3.0.0",
   "license": "MIT",
   "author": "Thijs Koerselman",
+  "homepage": "https://typescript-config.codecompose.dev",
   "repository": {
     "type": "git",
     "url": "https://github.com/0x80/typescript-config"
@@ -38,6 +39,14 @@
   "peerDependencies": {
     "typescript": ">=6.0.0"
   },
-  "devDependencies": {},
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.1-rc",
+    "vitepress": "^1.6.3"
+  },
   "packageManager": "pnpm@9.8.0"
 }
