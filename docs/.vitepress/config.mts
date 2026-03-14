@@ -46,10 +46,5 @@ export default defineConfig({
         link: "https://github.com/0x80/typescript-config",
       },
     ],
-
-    footer: {
-      message: "Released under the MIT License.",
-      copyright: "Copyright &copy; Thijs Koerselman",
-    },
   },
 });
