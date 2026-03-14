@@ -8,10 +8,16 @@ export default defineConfig({
   base: "/",
   cleanUrls: true,
 
-  head: [["link", { rel: "canonical", href: hostname }]],
-
   sitemap: {
     hostname,
+  },
+
+  transformHead({ pageData }) {
+    const canonicalUrl = `${hostname}/${pageData.relativePath}`
+      .replace(/index\.md$/, "")
+      .replace(/\.md$/, "");
+
+    return [["link", { rel: "canonical", href: canonicalUrl }]];
   },
 
   themeConfig: {
