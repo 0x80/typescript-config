@@ -12,6 +12,7 @@
     "verbatimModuleSyntax": true,
 
     /* Strictness */
+    "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "erasableSyntaxOnly": true,
