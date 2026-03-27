@@ -34,6 +34,7 @@
     "./react-library": "./src/react-library.json",
     "./service": "./src/service.json",
     "./shared-library": "./src/shared-library.json",
+    "./infra": "./src/infra.json",
     "./shared-react-library": "./src/shared-react-library.json"
   },
   "peerDependencies": {

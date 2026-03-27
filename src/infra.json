@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Infrastructure as Code (Pulumi)",
+  "compilerOptions": {
+    /* Base Options */
+    "skipLibCheck": true,
+    "target": "ES2022",
+    "lib": ["esnext"],
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+
+    /* Module */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    /* Pulumi */
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "noEmit": true
+  },
+  "files": ["${configDir}/index.ts"]
+}
