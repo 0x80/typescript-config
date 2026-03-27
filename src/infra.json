@@ -23,6 +23,5 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "noEmit": true
-  },
-  "files": ["${configDir}/index.ts"]
+  }
 }
