@@ -1,7 +1,7 @@
 {
   "name": "@codecompose/typescript-config",
   "description": "Opinionated reusable TypeScript configurations",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "license": "MIT",
   "author": "Thijs Koerselman",
   "homepage": "https://typescript-config.codecompose.dev",
