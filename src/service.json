@@ -5,5 +5,8 @@
   "compilerOptions": {
      /* Assuming your bundler will output everything.  */
     "noEmit": true,
+    /** TypeScript 6 no longer auto-includes @types packages. Services always
+     *  run on Node.js so we explicitly include @types/node. */
+    "types": ["node"]
   }
 }

@@ -22,7 +22,10 @@
     /* Pulumi */
     "experimentalDecorators": true,
     "sourceMap": true,
-    "noEmit": true
+    "noEmit": true,
+    /** TypeScript 6 no longer auto-includes @types packages. Infra code always
+     *  runs on Node.js so we explicitly include @types/node. */
+    "types": ["node"]
   },
   "files": ["${configDir}/index.ts"]
 }
