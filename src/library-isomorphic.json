@@ -9,6 +9,6 @@
      * WHATWG fetch, Response, Headers, etc. without leaking runtime-specific
      * bindings the way @cloudflare/workers-types or @types/node would.
      */
-    "lib": ["esnext", "DOM", "DOM.Iterable"]
+    "lib": ["dom", "dom.iterable", "esnext"]
   }
 }
