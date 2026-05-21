@@ -1,6 +1,6 @@
 # Project References
 
-The `shared-library` and `shared-react-library` configurations have `composite` set to `true`. This is required for TypeScript project references to work in a monorepo.
+The `shared-library` and `shared-library-react` configurations have `composite` set to `true`. This is required for TypeScript project references to work in a monorepo.
 
 ## Why Project References?
 

@@ -40,6 +40,16 @@ For standalone libraries that target multiple Web-standards runtimes — browser
 }
 ```
 
+## library-react
+
+For standalone React component libraries. Extends `base` with DOM libs, JSX support (`react-jsx`), and `noEmit: true`.
+
+```json
+{
+  "extends": "@codecompose/typescript-config/library-react"
+}
+```
+
 ## shared-library
 
 For shared libraries in a monorepo. Extends `base` with `composite`, `declaration`, and `declarationMap` enabled to support [project references](/project-references).
@@ -50,23 +60,13 @@ For shared libraries in a monorepo. Extends `base` with `composite`, `declaratio
 }
 ```
 
-## react-library
-
-For standalone React component libraries. Extends `base` with DOM libs, JSX support (`react-jsx`), and `noEmit: true`.
-
-```json
-{
-  "extends": "@codecompose/typescript-config/react-library"
-}
-```
-
-## shared-react-library
+## shared-library-react
 
 For shared React component libraries in a monorepo. Combines React support with the composite settings needed for [project references](/project-references).
 
 ```json
 {
-  "extends": "@codecompose/typescript-config/shared-react-library"
+  "extends": "@codecompose/typescript-config/shared-library-react"
 }
 ```
 

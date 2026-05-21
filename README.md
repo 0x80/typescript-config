@@ -12,7 +12,7 @@ Opinionated and reusable TypeScript configurations, geared towards modern build 
 - Provides `~/`, `@/`, and `#/` path aliases for `src`
 - Uses `${configDir}` for zero per-project configuration
 
-(*) The shared-library and shared-react-library configs are an exception: they enable `composite`, `declaration`, and `declarationMap` because project references require TypeScript to emit declarations. Your bundler still handles the JavaScript output.
+(*) The shared-library and shared-library-react configs are an exception: they enable `composite`, `declaration`, and `declarationMap` because project references require TypeScript to emit declarations. Your bundler still handles the JavaScript output.
 
 To use this successfully, you would need a modern bundler like [tsdown](https://tsdown.dev/). You can check out the [typescript-monorepo](https://github.com/0x80/typescript-monorepo) boilerplate for a working example of a modern monorepo setup with tsdown.
 
@@ -38,9 +38,9 @@ Often, no configuration is needed apart from `extends`.
 - `base` — Anything non-specific
 - `library` — Standalone libraries (not part of a monorepo)
 - `library-isomorphic` — Standalone libraries targeting multiple Web-standards runtimes (browser, RN, Workers, Deno, Bun, Node)
+- `library-react` — Standalone React component libraries (not part of a monorepo)
 - `shared-library` — Shared libraries in a monorepo
-- `react-library` — Standalone React component libraries (not part of a monorepo)
-- `shared-react-library` — Shared React component libraries in a monorepo
+- `shared-library-react` — Shared React component libraries in a monorepo
 - `nextjs` — Next.js applications
 - `service-node` — Backend service running on Node.js
 - `service-worker` — Backend service running on Cloudflare Workers
@@ -102,7 +102,7 @@ For users upgrading from v2, see the migration guide below.
 
 ## Assuming Bundler Output
 
-Outputs like sourcemaps and type declarations are disabled because it is assumed that your bundler will handle that. The shared-library and shared-react-library configs are an exception — they enable `declaration` and `declarationMap` because `composite` mode requires it for project references to work.
+Outputs like sourcemaps and type declarations are disabled because it is assumed that your bundler will handle that. The shared-library and shared-library-react configs are an exception — they enable `declaration` and `declarationMap` because `composite` mode requires it for project references to work.
 
 ## Incremental Builds
 
@@ -115,7 +115,7 @@ recommend adding the following script to your manifest based on `del-cli`:
 
 ## Project References
 
-The shared-library and shared-react-library configurations have `composite` set to `true`. This is required for TypeScript "project references" to work in a monorepo. They provide IDE go-to-definition, without having to emit the module output.
+The shared-library and shared-library-react configurations have `composite` set to `true`. This is required for TypeScript "project references" to work in a monorepo. They provide IDE go-to-definition, without having to emit the module output.
 
 In practice, this means that if you alter code in a shared package, the consuming app or library will pick up the changes, without requiring a watch task on the shared package to trigger a rebuild on every change.
 
