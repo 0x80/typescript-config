@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Standalone isomorphic library (browser, RN, Workers, etc.)",
-  "extends": "./base.json",
+  "extends": "./library.json",
   "compilerOptions": {
     /**
      * Targets any Web-standards runtime (browser, React Native, Cloudflare
@@ -9,8 +9,6 @@
      * WHATWG fetch, Response, Headers, etc. without leaking runtime-specific
      * bindings the way @cloudflare/workers-types or @types/node would.
      */
-    "lib": ["esnext", "DOM", "DOM.Iterable"],
-    /** Assuming your bundler will output everything. */
-    "noEmit": true
+    "lib": ["esnext", "DOM", "DOM.Iterable"]
   }
 }
