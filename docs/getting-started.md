@@ -28,7 +28,7 @@ import { other } from "@/helpers";
 import { another } from "#/helpers";
 ```
 
-The `#/` alias aligns with Node.js [subpath imports](https://nodejs.org/api/packages.html#subpath-imports), so you can mirror the same prefix in your `package.json` `imports` field to make resolution work at runtime in Node without a bundler.
+The `#/` alias aligns with Node.js [subpath imports](https://nodejs.org/api/packages.html#subpath-imports). If you mirror the same prefix in your `package.json` `imports` field, it can also resolve at runtime in Node (v25.4.0+) without a bundler.
 
 Make sure your bundler is also configured to resolve these aliases.
 
