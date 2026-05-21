@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Backend service (Node.js)",
+  "extends": "./base.json",
+  "compilerOptions": {
+    /** Assuming your bundler will output everything. */
+    "noEmit": true,
+    /**
+     * TypeScript 6 no longer auto-includes @types packages. Node services
+     * always run on Node.js so we explicitly include @types/node.
+     */
+    "types": ["node"]
+  }
+}

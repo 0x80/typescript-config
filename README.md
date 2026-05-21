@@ -35,16 +35,38 @@ Often, no configuration is needed apart from `extends`.
 
 ## Available Configurations
 
-- `base` - Anything non-specific
-- `library` - Standalone libraries (not part of a monorepo)
-- `shared-library` - Shared libraries in a monorepo
-- `react-library` - Standalone React component libraries (not part of a monorepo)
-- `shared-react-library` - Shared React component libraries in a monorepo
-- `nextjs` - Next.js applications
-- `service` - A backend service like an API server or cloud function
-
+- `base` — Anything non-specific
+- `library` — Standalone libraries (not part of a monorepo)
+- `library-isomorphic` — Standalone libraries targeting multiple Web-standards runtimes (browser, RN, Workers, Deno, Bun, Node)
+- `shared-library` — Shared libraries in a monorepo
+- `react-library` — Standalone React component libraries (not part of a monorepo)
+- `shared-react-library` — Shared React component libraries in a monorepo
+- `nextjs` — Next.js applications
+- `service-node` — Backend service running on Node.js
+- `service-worker` — Backend service running on Cloudflare Workers
+- `infra-pulumi` — Infrastructure-as-code with Pulumi
+- `infra-alchemy` — Infrastructure-as-code with Alchemy
 
 For other project types, like a CLI or E2E app, you can use the `base` configuration.
+
+## V4 — Runtime-explicit presets
+
+V4 reshapes the runtime-specific presets to make their target environment explicit in the name, and adds new presets for Cloudflare Workers, Alchemy, and isomorphic libraries.
+
+Renames (the contents are unchanged — only the import path moved):
+
+| V3 entry point | V4 entry point |
+| --- | --- |
+| `@codecompose/typescript-config/service` | `@codecompose/typescript-config/service-node` |
+| `@codecompose/typescript-config/infra` | `@codecompose/typescript-config/infra-pulumi` |
+
+New presets:
+
+- `service-worker` — same shape as `service-node` but with `types: ["@cloudflare/workers-types"]` instead of `["node"]`.
+- `infra-alchemy` — for [Alchemy](https://alchemy.run/) projects: files at the project root, `allowImportingTsExtensions`, and `@types/node`.
+- `library-isomorphic` — `library` with the DOM lib added so global `fetch`/`Response`/`Headers` are typed without leaking runtime-specific bindings.
+
+The `{category}-{runtime}` shape groups related presets in alphabetical listings and leaves room for future runtimes (`service-bun`, `service-deno`, `infra-terraform`, etc.) without further renames. The unqualified `service` and `infra` entry points are removed — there are no fallback aliases.
 
 ## V3 — TypeScript 6
 
