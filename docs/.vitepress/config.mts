@@ -40,7 +40,7 @@ export default defineConfig({
       {
         text: "Migration",
         items: [
-          { text: "From V3 to V4", link: "/migration-v4" },
+          { text: "From V3 to V5", link: "/migration-v5" },
           { text: "From V2 to V3", link: "/migration" },
         ],
       },

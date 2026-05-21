@@ -49,13 +49,15 @@ Often, no configuration is needed apart from `extends`.
 
 For other project types, like a CLI or E2E app, you can use the `base` configuration.
 
-## V4 — Runtime-explicit presets
+## V5 — Runtime-explicit presets
 
-V4 reshapes the runtime-specific presets to make their target environment explicit in the name, and adds new presets for Cloudflare Workers, Alchemy, and isomorphic libraries.
+V5 reshapes the runtime-specific presets to make their target environment explicit in the name, and adds new presets for Cloudflare Workers, Alchemy, and isomorphic libraries.
+
+> **Note on the version number:** V4 was skipped due to a publishing-workflow accident — `package.json` was bumped to `4.0.0` on the branch before merge, and the workflow then ran its own `major` bump on top, producing `5.0.0`. The published `5.0.0` is the release that was intended to be `4.0.0`; there is no `4.x` line.
 
 Renames (the contents are unchanged — only the import path moved):
 
-| V3 entry point | V4 entry point |
+| V3 entry point | V5 entry point |
 | --- | --- |
 | `@codecompose/typescript-config/service` | `@codecompose/typescript-config/service-node` |
 | `@codecompose/typescript-config/infra` | `@codecompose/typescript-config/infra-pulumi` |
