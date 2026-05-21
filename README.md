@@ -41,7 +41,7 @@ Often, no configuration is needed apart from `extends`.
 - `library-react` — Standalone React component libraries (not part of a monorepo)
 - `shared-library` — Shared libraries in a monorepo
 - `shared-library-react` — Shared React component libraries in a monorepo
-- `nextjs` — Next.js applications
+- `app-nextjs` — Next.js applications
 - `service-node` — Backend service running on Node.js
 - `service-worker` — Backend service running on Cloudflare Workers
 - `infra-pulumi` — Infrastructure-as-code with Pulumi

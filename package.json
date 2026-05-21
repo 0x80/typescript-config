@@ -38,7 +38,7 @@
     "./library": "./src/library.json",
     "./library-isomorphic": "./src/library-isomorphic.json",
     "./library-react": "./src/library-react.json",
-    "./nextjs": "./src/nextjs.json",
+    "./app-nextjs": "./src/app-nextjs.json",
     "./service-node": "./src/service-node.json",
     "./service-worker": "./src/service-worker.json",
     "./shared-library": "./src/shared-library.json",

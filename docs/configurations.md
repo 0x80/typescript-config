@@ -70,13 +70,13 @@ For shared React component libraries in a monorepo. Combines React support with 
 }
 ```
 
-## nextjs
+## app-nextjs
 
 For Next.js applications. Extends `base` with `jsx: preserve`, DOM libs, the Next.js plugin, and adjusted `rootDir`/`include` paths to match Next.js conventions.
 
 ```json
 {
-  "extends": "@codecompose/typescript-config/nextjs"
+  "extends": "@codecompose/typescript-config/app-nextjs"
 }
 ```
 
