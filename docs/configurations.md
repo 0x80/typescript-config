@@ -18,7 +18,7 @@ Key options:
 - `noImplicitOverride`: `true`
 - `erasableSyntaxOnly`: `true`
 - `incremental`: `true`
-- Path aliases `~/` and `@/` for `src`
+- Path aliases `~/`, `@/`, and `#/` for `src`
 
 ## library
 

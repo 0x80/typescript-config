@@ -20,12 +20,15 @@ Often, no additional configuration is needed apart from `extends`.
 
 ## Path Aliases
 
-All configurations provide `~/` and `@/` path aliases that map to `src/`. This means you can import from your source root using either alias:
+All configurations provide `~/`, `@/`, and `#/` path aliases that map to `src/`. This means you can import from your source root using any of these aliases:
 
 ```ts
 import { something } from "~/utils";
 import { other } from "@/helpers";
+import { another } from "#/helpers";
 ```
+
+The `#/` alias aligns with Node.js [subpath imports](https://nodejs.org/api/packages.html#subpath-imports). If you mirror the same prefix in your `package.json` `imports` field, it can also resolve at runtime in Node (v25.4.0+) without a bundler.
 
 Make sure your bundler is also configured to resolve these aliases.
 

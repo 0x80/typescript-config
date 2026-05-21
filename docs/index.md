@@ -7,7 +7,7 @@ Opinionated and reusable TypeScript configurations, geared towards modern build 
 - Requires TypeScript 6.0 or later
 - Builds on TS6 strict defaults with additional strictness
 - Assumes `src` and `dist` directories
-- Provides `~/` and `@/` path aliases for `src`
+- Provides `~/`, `@/`, and `#/` path aliases for `src`
 - Uses `${configDir}` for zero per-project configuration
 
 ::: info Shared configs are an exception

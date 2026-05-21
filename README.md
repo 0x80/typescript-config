@@ -9,7 +9,7 @@ Opinionated and reusable TypeScript configurations, geared towards modern build 
 - Requires TypeScript 6.0 or later
 - Builds on TS6 strict defaults with additional strictness: `noUncheckedIndexedAccess`, `noImplicitOverride`, and `erasableSyntaxOnly`
 - Assumes `src` and `dist` directories
-- Provides `~/` and `@/` path aliases for `src`
+- Provides `~/`, `@/`, and `#/` path aliases for `src`
 - Uses `${configDir}` for zero per-project configuration
 
 (*) The shared-library and shared-react-library configs are an exception: they enable `composite`, `declaration`, and `declarationMap` because project references require TypeScript to emit declarations. Your bundler still handles the JavaScript output.

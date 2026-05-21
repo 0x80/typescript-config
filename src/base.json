@@ -25,7 +25,8 @@
     "rootDir": "${configDir}/src",
     "paths": {
       "~/*": ["${configDir}/src/*"],
-      "@/*": ["${configDir}/src/*"]
+      "@/*": ["${configDir}/src/*"],
+      "#/*": ["${configDir}/src/*"]
     }
   },
   "include": ["${configDir}/src", "${configDir}/src/**/*.json"],
