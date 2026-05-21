@@ -35,7 +35,13 @@ export default defineConfig({
         items: [
           { text: "Project References", link: "/project-references" },
           { text: "Publishing to NPM", link: "/publishing" },
-          { text: "Migration from V2", link: "/migration" },
+        ],
+      },
+      {
+        text: "Migration",
+        items: [
+          { text: "From V3 to V4", link: "/migration-v4" },
+          { text: "From V2 to V3", link: "/migration" },
         ],
       },
     ],

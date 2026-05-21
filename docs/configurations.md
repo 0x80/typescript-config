@@ -30,6 +30,16 @@ For standalone libraries that are not part of a monorepo. Extends `base` with `n
 }
 ```
 
+## library-isomorphic
+
+For standalone libraries that target multiple Web-standards runtimes — browser, React Native, Cloudflare Workers, Deno, Bun, or modern Node. Extends `library` with the DOM lib added so global WHATWG types (`fetch`, `Response`, `Headers`, etc.) are available without leaking runtime-specific bindings.
+
+```json
+{
+  "extends": "@codecompose/typescript-config/library-isomorphic"
+}
+```
+
 ## shared-library
 
 For shared libraries in a monorepo. Extends `base` with `composite`, `declaration`, and `declarationMap` enabled to support [project references](/project-references).
@@ -70,12 +80,42 @@ For Next.js applications. Extends `base` with `jsx: preserve`, DOM libs, the Nex
 }
 ```
 
-## service
+## service-node
 
-For backend services like API servers or cloud functions. Extends `base` with `noEmit: true`.
+For backend services running on Node.js — API servers, cloud functions, long-running daemons. Extends `base` with `noEmit: true` and `types: ["node"]`.
 
 ```json
 {
-  "extends": "@codecompose/typescript-config/service"
+  "extends": "@codecompose/typescript-config/service-node"
+}
+```
+
+## service-worker
+
+For backend services running on the Cloudflare Workers runtime. Extends `base` with `noEmit: true` and `types: ["@cloudflare/workers-types"]`. Add `@cloudflare/workers-types` as a dev dependency in your service.
+
+```json
+{
+  "extends": "@codecompose/typescript-config/service-worker"
+}
+```
+
+## infra-pulumi
+
+For [Pulumi](https://www.pulumi.com/) projects. Does not extend `base` because Pulumi has its own constraints (target `ES2022`, `experimentalDecorators`, single `index.ts` entry, no `src` directory). Includes `@types/node`.
+
+```json
+{
+  "extends": "@codecompose/typescript-config/infra-pulumi"
+}
+```
+
+## infra-alchemy
+
+For [Alchemy](https://alchemy.run/) projects. Does not extend `base` because Alchemy projects have files at the project root rather than in `src`. Enables `allowImportingTsExtensions` (Alchemy reads `.ts` directly via its runtime) and includes `@types/node`.
+
+```json
+{
+  "extends": "@codecompose/typescript-config/infra-alchemy"
 }
 ```

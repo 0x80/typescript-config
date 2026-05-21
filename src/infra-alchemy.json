@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Infrastructure as Code (Alchemy)",
+  "compilerOptions": {
+    /* Base Options */
+    "skipLibCheck": true,
+    "target": "esnext",
+    "lib": ["esnext"],
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "verbatimModuleSyntax": true,
+
+    /* Module */
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "erasableSyntaxOnly": true,
+
+    /* Alchemy */
+    "noEmit": true,
+    /**
+     * Alchemy reads TypeScript files directly via its runtime, so consumers
+     * can import sibling modules with explicit .ts extensions.
+     */
+    "allowImportingTsExtensions": true,
+    /**
+     * TypeScript 6 no longer auto-includes @types packages. Alchemy runs on
+     * Node.js (or Bun) so we explicitly include @types/node.
+     */
+    "types": ["node"]
+  },
+  "include": ["${configDir}/**/*.ts"],
+  "exclude": ["${configDir}/node_modules", "${configDir}/.alchemy"]
+}

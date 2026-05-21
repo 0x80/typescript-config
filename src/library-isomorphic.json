@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Standalone isomorphic library (browser, RN, Workers, etc.)",
+  "extends": "./library.json",
+  "compilerOptions": {
+    /**
+     * Targets any Web-standards runtime (browser, React Native, Cloudflare
+     * Workers, Deno, Bun, modern Node). Adding DOM lib exposes the global
+     * WHATWG fetch, Response, Headers, etc. without leaking runtime-specific
+     * bindings the way @cloudflare/workers-types or @types/node would.
+     */
+    "lib": ["dom", "dom.iterable", "esnext"]
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "@codecompose/typescript-config",
   "description": "Opinionated reusable TypeScript configurations",
-  "version": "3.2.0",
+  "version": "4.0.0",
   "license": "MIT",
   "author": "Thijs Koerselman",
   "homepage": "https://typescript-config.codecompose.dev",
@@ -21,7 +21,13 @@
     "nextjs",
     "react",
     "library",
+    "isomorphic",
     "service",
+    "node",
+    "cloudflare",
+    "workers",
+    "pulumi",
+    "alchemy",
     "bundler"
   ],
   "files": [
@@ -30,12 +36,15 @@
   "exports": {
     "./base": "./src/base.json",
     "./library": "./src/library.json",
+    "./library-isomorphic": "./src/library-isomorphic.json",
     "./nextjs": "./src/nextjs.json",
     "./react-library": "./src/react-library.json",
-    "./service": "./src/service.json",
+    "./service-node": "./src/service-node.json",
+    "./service-worker": "./src/service-worker.json",
     "./shared-library": "./src/shared-library.json",
-    "./infra": "./src/infra.json",
-    "./shared-react-library": "./src/shared-react-library.json"
+    "./shared-react-library": "./src/shared-react-library.json",
+    "./infra-pulumi": "./src/infra-pulumi.json",
+    "./infra-alchemy": "./src/infra-alchemy.json"
   },
   "peerDependencies": {
     "typescript": ">=6.0.0"
